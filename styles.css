@@ -1,0 +1,102 @@
+body{
+    background: linear-gradient(135deg, #153677 , #4e085f);
+}
+
+.todoApp{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+}
+
+header{
+    text-align: center;
+}
+
+img{
+    width: 30px;
+    margin-left: 10px;
+    position: relative;
+    top:7px;
+}
+
+li{
+   width: 75%;
+   padding: 12px 8px 12px 50px;
+   background-color: #543b6d;
+   list-style-type: none;
+   border-radius: 4px;
+   border: 2px solid black;
+   margin: auto;
+   margin-bottom: 10px;
+   font-size: 1.35rem;
+   cursor: pointer;
+   position: relative;
+   color: white;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    background-color: #ffffff;
+    top:12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color:#908e91;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+    border: none;
+}
+
+input{
+padding: 10px;
+border: 2px solid #5784d5;
+font-size: 1rem;
+width: 45%;
+}
+
+button{
+    background-color: #2d6be6;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.delete{
+    background-color: blue;
+    border-radius: 4px;
+    color: white;
+    float: right;
+    padding: 0.3rem;
+    /* position: absolute; */
+    margin-bottom: 10px;
+}
+
+.right{
+    padding: 0.3rem;
+    float: right;
+    margin-left: 10px;
+}
+
+.delete:hover{
+    background-color: rgba(53, 64, 216, 0.749);
+}
+li:empty::before{
+    content: "code";
+}
